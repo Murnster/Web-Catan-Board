@@ -3,10 +3,234 @@
 <html>
     <script src="main.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <head>
-        <h2>generator</h2>
-    </head>
     <body>
-        <button type='button' class='test' onclick="boardGen()">Click this</button>
+        <div class="mainHead">
+            <h2>Catan Board Generator</h2>
+        </div>
+        <div class="board">
+            <div class="board-row">
+                <div class="tileDiv">
+                    <!-- <div class="hex"></div> -->
+                    <svg class="hex">
+                        <defs>
+                            <pattern id="img1" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img1')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                    <svg class="hex">
+                        <defs>
+                            <pattern id="img2" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img2')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img3" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img3')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+            </div>
+            <div class="board-row">
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img4" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img4')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img5" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img5')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img6" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img6')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img7" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img7')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+            </div>
+            <div class="board-row">
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img8" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img8')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img9" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img9')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img10" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img10')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img11" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img11')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img12" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img12')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+            </div>
+            <div class="board-row">
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img13" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img13')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img14" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img14')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img15" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img15')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img16" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img16')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+            </div>
+            <div class="board-row">
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img17" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img17')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img18" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img18')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+                <div class="tileDiv">
+                     <svg class="hex">
+                        <defs>
+                            <pattern id="img19" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+                                <image xlink:href="wood.jpg" width="150%" height="100%" />             
+                            </pattern>
+                        </defs>
+                        <polygon fill="url('#img19')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
+                        style="stroke-width: 1px;" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="mainFoot">
+            <button type='button' class='test' onclick="boardGen()">NEW BOARD</button>
+        </div>
     </body>
 </html>

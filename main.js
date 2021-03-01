@@ -5,8 +5,8 @@
 // boardNums = [2,12,3,3,11,11,4,4,10,10,5,5,9,9,6,6,8,8]
 
 // Terrains on the board in the form of numbers
-// 1 - Wood, 2 - Sheep, 3 - Wheat, 4 - Clay, 5 - Rocks, 6 - Desert
-// terrains = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5,6]
+// 0 - Desert, 1 - Wood, 2 - Sheep, 3 - Wheat, 4 - Clay, 5 - Rocks
+// terrains = [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5]
 
 // Ports on the board in the form of numbers
 // 1 - 3:1, 2 - Wood, 3 - Sheep, 4 - Wheat, 5 - Clay, 6 - Rocks
@@ -20,27 +20,35 @@ var fails = 0;
 
 function boardGen() {
     var boardNums = [0,2,12,3,3,11,11,4,4,10,10,5,5,9,9,6,6,8,8]
-
+    var terrNums = [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5]
     // terrains = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5,6]
     // ports = [1,1,1,1,2,3,4,5,6]
-
-    var boardNums = randomizer(boardNums)
+    
+    boardNums = randomizer(boardNums)
+    terrNums = randomizer(terrNums)
     if (arrayCheck(boardNums)) {
         console.log('BOOM!');
         console.log('This failed: ' + fails);
         console.log(boardNums);
 
-        console.log('   ' + boardNums[0] + ' ' + boardNums[1] + ' ' + boardNums[2] + ' ')
-        console.log(' ' + boardNums[3] + ' ' + boardNums[4] + ' ' + boardNums[5] + ' ' + boardNums[6])
-        console.log(boardNums[7] + ' ' + boardNums[8] + ' ' + boardNums[9] + ' ' + boardNums[10] + ' ' + boardNums[11])
-        console.log(' ' + boardNums[12] + ' ' + boardNums[13] + ' ' + boardNums[14] + ' ' + boardNums[15])
-        console.log('   ' + boardNums[16] + ' ' + boardNums[17] + ' ' + boardNums[18] + ' ')
+        terrains = terrainArray(terrNums);
+
+        console.log('   ' + boardNums[0] + terrains[0].substring(0,2) + ' ' + boardNums[1] + terrains[1].substring(0,2) + ' ' + boardNums[2]+ terrains[2].substring(0,2) + ' ')
+        console.log(' ' + boardNums[3] + terrains[3].substring(0,2) + ' ' + boardNums[4] + terrains[4].substring(0,2) + ' ' + boardNums[5] + terrains[5].substring(0,2) + ' ' + boardNums[6] + terrains[6].substring(0,2))
+        console.log(boardNums[7] + terrains[7].substring(0,2) + ' ' + boardNums[8] + terrains[8].substring(0,2) + ' ' + boardNums[9] + terrains[9].substring(0,2) + ' ' + boardNums[10] + terrains[10].substring(0,2) + ' ' + boardNums[11] + terrains[11].substring(0,2))
+        console.log(' ' + boardNums[12] + terrains[12].substring(0,2) + ' ' + boardNums[13] + terrains[13].substring(0,2) + ' ' + boardNums[14] + terrains[14].substring(0,2) + ' ' + boardNums[15] + terrains[15].substring(0,2))
+        console.log('   ' + boardNums[16] + terrains[16].substring(0,2) + ' ' + boardNums[17] + terrains[17].substring(0,2) + ' ' + boardNums[18] + terrains[18].substring(0,2) + ' ')
         
+
+        
+        console.log(terrains);
+
     } else {
         fails = fails + 1
         console.log('fail');
         boardGen();
     }
+
     // document.getElementById('.test').addEventListener('click', () => {
     //     console.log(boardNums);
     // });
@@ -113,4 +121,34 @@ function arrayCheck(array) {
     } else {
         return false;
     }
+}
+
+function terrainArray(array) {
+    // array.map(String)
+    var terrains = []
+
+    for (i = 0; i < array.length; i++) {
+        switch(array[i]) {
+            case 0:
+                terrains.push('desert');
+                break;
+            case 1:
+                terrains.push('wood');
+                break;
+            case 2:
+                terrains.push('sheep');
+                break;
+            case 3:
+                terrains.push('wheat');
+                break;
+            case 4:
+                terrains.push('clay');
+                break;
+            case 5:
+                terrains.push('rock');
+                break;
+        }
+    };
+
+    return terrains;
 }
