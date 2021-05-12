@@ -19,54 +19,89 @@
 var fails = 0;
 
 function boardGen() {
-    var boardNums = [0,2,12,3,3,11,11,4,4,10,10,5,5,9,9,6,6,8,8]
-    var terrNums = [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5]
-    // terrains = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5,6]
+    var boardNums = [0,2,12,3,3,11,11,4,4,10,10,5,5,9,9,6,6,8,8];
+    var terrNums = [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5];
+    var nums = false;
+    var terrs = false;
     // ports = [1,1,1,1,2,3,4,5,6]
-    
-    boardNums = randomizer(boardNums)
-    terrNums = randomizer(terrNums)
-    if (arrayCheck(boardNums)) {
-        console.log('BOOM!');
-        console.log('This failed: ' + fails);
-        console.log(boardNums);
+    // console.log(nums, terrs);
 
-        terrains = terrainArray(terrNums);
+    while (!nums) {
+        boardNums = randomizer(boardNums);
 
-        console.log('   ' + boardNums[0] + terrains[0].substring(0,2) + ' ' + boardNums[1] + terrains[1].substring(0,2) + ' ' + boardNums[2]+ terrains[2].substring(0,2) + ' ')
-        console.log(' ' + boardNums[3] + terrains[3].substring(0,2) + ' ' + boardNums[4] + terrains[4].substring(0,2) + ' ' + boardNums[5] + terrains[5].substring(0,2) + ' ' + boardNums[6] + terrains[6].substring(0,2))
-        console.log(boardNums[7] + terrains[7].substring(0,2) + ' ' + boardNums[8] + terrains[8].substring(0,2) + ' ' + boardNums[9] + terrains[9].substring(0,2) + ' ' + boardNums[10] + terrains[10].substring(0,2) + ' ' + boardNums[11] + terrains[11].substring(0,2))
-        console.log(' ' + boardNums[12] + terrains[12].substring(0,2) + ' ' + boardNums[13] + terrains[13].substring(0,2) + ' ' + boardNums[14] + terrains[14].substring(0,2) + ' ' + boardNums[15] + terrains[15].substring(0,2))
-        console.log('   ' + boardNums[16] + terrains[16].substring(0,2) + ' ' + boardNums[17] + terrains[17].substring(0,2) + ' ' + boardNums[18] + terrains[18].substring(0,2) + ' ')
-        
-
-        
-        console.log(terrains);
-
-    } else {
-        fails = fails + 1
-        console.log('fail');
-        boardGen();
+        if (arrayCheck(boardNums)) {
+            nums = true;
+        } else {
+            fails = fails + 1;
+        }
     }
 
-    // document.getElementById('.test').addEventListener('click', () => {
-    //     console.log(boardNums);
-    // });
-}
+    while (!terrs) {
+        terrNums = randomizer(terrNums);
 
-// **old concept?
-// Randomly selects number based off places next to eachother 
-// function numGen(one, two, three, four, five, six) {
-// }
+        if (arrayCheck(terrNums)) {
+            terrs = true;
+        } 
+        // else { // Fail Check
+        //     fails = fails + 1;
+        // }
+    }
+
+    if (nums && terrs) {
+        terrains = terrainArray(terrNums);
+        
+        // console.log(boardNums);
+        // console.log(terrains);
+        // console.log('This failed: ' + fails);
+        // console.log('   ' + boardNums[0] + terrains[0].substring(0,2) + ' ' + boardNums[1] + terrains[1].substring(0,2) + ' ' + boardNums[2]+ terrains[2].substring(0,2) + ' ');
+        // console.log(' ' + boardNums[3] + terrains[3].substring(0,2) + ' ' + boardNums[4] + terrains[4].substring(0,2) + ' ' + boardNums[5] + terrains[5].substring(0,2) + ' ' + boardNums[6] + terrains[6].substring(0,2));
+        // console.log(boardNums[7] + terrains[7].substring(0,2) + ' ' + boardNums[8] + terrains[8].substring(0,2) + ' ' + boardNums[9] + terrains[9].substring(0,2) + ' ' + boardNums[10] + terrains[10].substring(0,2) + ' ' + boardNums[11] + terrains[11].substring(0,2));
+        // console.log(' ' + boardNums[12] + terrains[12].substring(0,2) + ' ' + boardNums[13] + terrains[13].substring(0,2) + ' ' + boardNums[14] + terrains[14].substring(0,2) + ' ' + boardNums[15] + terrains[15].substring(0,2));
+        // console.log('   ' + boardNums[16] + terrains[16].substring(0,2) + ' ' + boardNums[17] + terrains[17].substring(0,2) + ' ' + boardNums[18] + terrains[18].substring(0,2) + ' ');
+
+        for (var i=0; i<terrains.length; i++) {
+            $('#tileText'+i).html(boardNums[i]);
+
+            switch (terrains[i]) {
+                case "wood":
+                $(`#tile`+i).attr("xlink:href", "wood.jpg");
+                    break;
+
+                case "wheat":
+                $(`#tile`+i).attr("xlink:href", "wheat.jpg");
+                    break;
+
+                case "sheep":
+                $(`#tile`+i).attr("xlink:href", "sheep.jpg");
+                    break;  
+
+                case "rock":
+                $(`#tile`+i).attr("xlink:href", "rock.jpg");
+                    break;
+
+                case "clay":
+                $(`#tile`+i).attr("xlink:href", "clay.jpg");
+                    break;
+
+                case "desert":
+                    $(`#tile`+i).attr("xlink:href", "desert.jpg");
+                    break;
+            }
+        }
+    } else {
+        boardGen();
+    }
+}
 
 // Array randomizer function
 function randomizer(array) {
     for(let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * i)
         const temp = array[i];
-        array[i] = array[j]
-        array[j] = temp
+        array[i] = array[j];
+        array[j] = temp;
     }
+
     return array;
 }
 
@@ -124,8 +159,7 @@ function arrayCheck(array) {
 }
 
 function terrainArray(array) {
-    // array.map(String)
-    var terrains = []
+    var terrains = [];
 
     for (i = 0; i < array.length; i++) {
         switch(array[i]) {
@@ -152,3 +186,8 @@ function terrainArray(array) {
 
     return terrains;
 }
+
+// **old concept?
+// Randomly selects number based off places next to eachother 
+// function numGen(one, two, three, four, five, six) {
+// }

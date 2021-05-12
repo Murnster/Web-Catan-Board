@@ -18,39 +18,17 @@
     height: 150px;
     margin: -17.7px -14;
 }
-/* .hex {
-    position: relative;
-    width: 75px; 
-    height: 42.8px;
-    background-color: #000000;
-    margin: 11.3px -4;
-}
-.hex:before,
-.hex:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    border-left: 37.5px solid transparent;
-    border-right: 37.5px solid transparent;
-}
-.hex:before {
-    bottom: 100%;
-    border-bottom: 21.65px solid #000000;
-}
-.hex:after {
-    top: 100%;
-    width: 0;
-    border-top: 21.65px solid #000000;
-}
-.hex-row {
-    clear: left;
-}
-.hex-row .even {
-    margin-left: 53px;
-} */
 .tileDiv {
     margin-right: 10px;
 }
-.wood {
-    fill: url("wood.jpg");
+.tileNum {
+    fill: beige;
+    color: black;
+}
+.numStyle {
+    font-size: x-large;
+}
+svg {
+    width: auto;
+    height: auto;
 }
