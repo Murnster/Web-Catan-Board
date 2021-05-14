@@ -20,9 +20,10 @@ var fails = 0;
 
 function boardGen() {
     var boardNums = [0,2,12,3,3,11,11,4,4,10,10,5,5,9,9,6,6,8,8];
-    var terrNums = [0,1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5];
+    var terrNums = [1,1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5]; // Does not include 0 for desert. Dynamically added later
     var nums = false;
     var terrs = false;
+    var zeroIndex = 0;
     // ports = [1,1,1,1,2,3,4,5,6]
     // console.log(nums, terrs);
 
@@ -36,15 +37,18 @@ function boardGen() {
         }
     }
 
+    zeroIndex = boardNums.indexOf(0);
+
     while (!terrs) {
         terrNums = randomizer(terrNums);
+        terrNums.splice(zeroIndex, 0, 0);
 
         if (arrayCheck(terrNums)) {
             terrs = true;
-        } 
-        // else { // Fail Check
-        //     fails = fails + 1;
-        // }
+        } else {
+            terrNums.splice(zeroIndex, 1);
+            fails = fails + 1;
+        }
     }
 
     if (nums && terrs) {
@@ -59,33 +63,35 @@ function boardGen() {
         // console.log(' ' + boardNums[12] + terrains[12].substring(0,2) + ' ' + boardNums[13] + terrains[13].substring(0,2) + ' ' + boardNums[14] + terrains[14].substring(0,2) + ' ' + boardNums[15] + terrains[15].substring(0,2));
         // console.log('   ' + boardNums[16] + terrains[16].substring(0,2) + ' ' + boardNums[17] + terrains[17].substring(0,2) + ' ' + boardNums[18] + terrains[18].substring(0,2) + ' ');
 
-        for (var i=0; i<terrains.length; i++) {
-            $('#tileText'+i).html(boardNums[i]);
+        for (var i=0; i<boardNums.length; i++) {
+            if (boardNums[i] == 0) {
+                $('#tileText'+i).prev().remove();
+                $(`#tile`+i).attr("xlink:href", "desert.jpg");
+                
+            } else {
+                $('#tileText'+i).html(boardNums[i]);
 
-            switch (terrains[i]) {
-                case "wood":
-                $(`#tile`+i).attr("xlink:href", "wood.jpg");
-                    break;
-
-                case "wheat":
-                $(`#tile`+i).attr("xlink:href", "wheat.jpg");
-                    break;
-
-                case "sheep":
-                $(`#tile`+i).attr("xlink:href", "sheep.jpg");
-                    break;  
-
-                case "rock":
-                $(`#tile`+i).attr("xlink:href", "rock.jpg");
-                    break;
-
-                case "clay":
-                $(`#tile`+i).attr("xlink:href", "clay.jpg");
-                    break;
-
-                case "desert":
-                    $(`#tile`+i).attr("xlink:href", "desert.jpg");
-                    break;
+                switch (terrains[i]) {
+                    case "wood":
+                        $(`#tile`+i).attr("xlink:href", "wood.jpg");
+                        break;
+    
+                    case "wheat":
+                        $(`#tile`+i).attr("xlink:href", "wheat.jpg");
+                        break;
+    
+                    case "sheep":
+                        $(`#tile`+i).attr("xlink:href", "sheep.jpg");
+                        break;
+    
+                    case "rock":
+                        $(`#tile`+i).attr("xlink:href", "rock.jpg");
+                        break;
+    
+                    case "clay":
+                        $(`#tile`+i).attr("xlink:href", "clay.jpg");
+                        break;
+                }
             }
         }
     } else {
