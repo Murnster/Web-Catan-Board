@@ -1,4 +1,7 @@
 @media screen and (max-width: 1120px) {
+    .board {
+        padding-left: 19.09px !important;
+    }
     .tileDiv {
         width: 125px; 
         height: 125px;
@@ -9,6 +12,9 @@
     }
 }
 @media screen and (max-width: 760px) {
+    .board {
+        padding-left: 15.33px !important;
+    }
     .tileDiv {
         width: 100px; 
         height: 100px;
@@ -19,6 +25,9 @@
     }
 }
 @media screen and (max-width: 600px) {
+    .board {
+        padding-left: 11.5px !important;
+    }
     #mainContent {
         padding-top: 10%;
     }
@@ -32,6 +41,9 @@
     }
 }
 @media screen and (max-width: 475px) {
+    .board {
+        padding-left: 8.4px !important;
+    }
     .mainHead {
         font-size: large;
     }
@@ -48,6 +60,9 @@
     }
 }
 @media screen and (max-width: 320px) {
+    .board {
+        padding-left: 6.9px !important;
+    }
     .mainHead {
         font-size: medium;
     }
@@ -64,6 +79,9 @@
     }
 }
 @media screen and (max-width: 280px) {
+    .board {
+        padding-left: 6.28px !important;
+    }
     #mainContent {
         padding-top: 5%;
     }
