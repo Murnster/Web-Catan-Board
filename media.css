@@ -1,0 +1,78 @@
+@media screen and (max-width: 1120px) {
+    .tileDiv {
+        width: 125px; 
+        height: 125px;
+        margin-right: 19.09px;
+    }
+    .hex {
+        margin: -17.7 -18.26px;
+    }
+}
+@media screen and (max-width: 760px) {
+    .tileDiv {
+        width: 100px; 
+        height: 100px;
+        margin-right: 15.33px;
+    }
+    .hex {
+        margin: -17.7 -14.67px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #mainContent {
+        padding-top: 10%;
+    }
+    .tileDiv {
+        width: 75px; 
+        height: 75px;
+        margin-right: 11.5px;
+    }
+    .hex {
+        margin: -17.7 -11px;
+    }
+}
+@media screen and (max-width: 475px) {
+    .mainHead {
+        font-size: large;
+    }
+    #mainContent {
+        padding-top: 15%;
+    }
+    .tileDiv {
+        width: 55px; 
+        height: 55px;
+        margin-right: 8.4px;
+    }
+    .hex {
+        margin: -17.7 -6px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .mainHead {
+        font-size: medium;
+    }
+    #mainContent {
+        padding-top: 5%;
+    }
+    .tileDiv {
+        width: 45px;
+        height: 45px;
+        margin-right: 6.9px;
+    }
+    .hex {
+        margin: -17.7 -6.6px;
+    }
+}
+@media screen and (max-width: 280px) {
+    #mainContent {
+        padding-top: 5%;
+    }
+    .tileDiv {
+        width: 41px;
+        height: 41px;
+        margin-right: 6.28px;
+    }
+    .hex {
+        margin: -17.7 -6.013px;
+    }
+}

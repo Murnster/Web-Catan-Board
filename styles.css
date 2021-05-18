@@ -1,5 +1,15 @@
 /* Author: Ryan Murney */
 /* Main CSS file for Catan Board Generator Application  */
+body {
+    background: antiquewhite;
+}
+#mainContent {
+    max-width: 100%;
+    max-height: 100vh;
+    overflow-x: hidden;
+    padding: 15px;
+    background: transparent;
+}
 .mainHead {
     text-align: center;
     margin-bottom: 45px;
@@ -14,21 +24,20 @@
 }
 .hex {
     position: relative;
-    width: 150px; 
-    height: 150px;
-    margin: -17.7px -14;
+    margin: -17.7px -22;
+}
+.hidden {
+    display: none;
 }
 .tileDiv {
-    margin-right: 10px;
+    width: 150px; 
+    height: 150px;
+    margin-right: 23px;
 }
 .tileNum {
     fill: beige;
     color: black;
 }
-.numStyle {
+.tile-text {
     font-size: x-large;
-}
-svg {
-    width: auto;
-    height: auto;
 }
