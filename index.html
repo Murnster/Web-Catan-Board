@@ -1,270 +1,253 @@
 <!-- Author: Ryan Murney -->
 <!-- Main HTML file for Catan Board Generator Application -->
 <html>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media.css">
     <body onload='boardGen()'>
         <div id="mainContent">
             <div class="mainHead">
-                <h2>Catan Board Generator</h2>
+                <div>Catan Board Generator</div>
             </div>
             <div class="board">
                 <div class="board-row">
                     <div class="tileDiv">
                         <!-- <div class="hex"></div> -->
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img1" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile0" xlink:href="" width="160%" height="100%"/>             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img1')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img1')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText0" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText0" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img2" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile1" xlink:href="" width="160%" height="100%"/>             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img2')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img2')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText1" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText1" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img3" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile2" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img3')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img3')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText2" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText2" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                 </div>
                 <div class="board-row">
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img4" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile3" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img4')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img4')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText3" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText3" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img5" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile4" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img5')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img5')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText4" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText4" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img6" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile5" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img6')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img6')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText5" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText5" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img7" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile6" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img7')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img7')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText6" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText6" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                 </div>
                 <div class="board-row">
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img8" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile7" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img8')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img8')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText7" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText7" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img9" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile8" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img9')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img9')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText8" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText8" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img10" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile9" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img10')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img10')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText9" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText9" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img11" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile10" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img11')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img11')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText10" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText10" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img12" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile11" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img12')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img12')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText11" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText11" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                 </div>
                 <div class="board-row">
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img13" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile12" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img13')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img13')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText12" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText12" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img14" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile13" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img14')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img14')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText13" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText13" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img15" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile14" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img15')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img15')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText14" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText14" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img16" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile15" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img16')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img16')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText15" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText15" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                 </div>
                 <div class="board-row">
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img17" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile16" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img17')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img17')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText16" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText16" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img18" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile17" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img18')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img18')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText17" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText17" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                     <div class="tileDiv">
-                        <svg class="hex">
+                        <svg viewBox="0 0 150 150" class="hex">
                             <defs>
                                 <pattern id="img19" patternUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
                                     <image id="tile18" xlink:href="" width="160%" height="100%" />             
                                 </pattern>
                             </defs>
-                            <polygon fill="url('#img19')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5"
-                            style="stroke-width: 1px;" />
+                            <polygon fill="url('#img19')" points="75,150 140,112.5 140,37.5 75,0 10,37.5 10,112.5" style="stroke-width: 1px;" />
                             <circle class="tileNum" cx="50%" cy="50%" r="25" dominant-baseline="middle" text-anchor="middle"></circle>
-                            <text id="tileText18" class="numStyle" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
+                            <text id="tileText18" class="tile-text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"></text>
                         </svg>
                     </div>
                 </div>

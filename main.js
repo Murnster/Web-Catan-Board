@@ -16,6 +16,7 @@
 // together to form the catan board. Checks numbers at the end to ensure rules
 // of generation.
 
+var firstLoad = true;
 var fails = 0;
 
 function boardGen() {
@@ -26,6 +27,11 @@ function boardGen() {
     var zeroIndex = 0;
     // ports = [1,1,1,1,2,3,4,5,6]
     // console.log(nums, terrs);
+
+    if (!firstLoad) {
+        $('.tile-text').empty(); // Temp Fix - Find a better way
+        $('.hidden').removeClass('hidden');
+    }
 
     while (!nums) {
         boardNums = randomizer(boardNums);
@@ -65,7 +71,7 @@ function boardGen() {
 
         for (var i=0; i<boardNums.length; i++) {
             if (boardNums[i] == 0) {
-                $('#tileText'+i).prev().remove();
+                $('#tileText'+i).prev('.tileNum').addClass('hidden');
                 $(`#tile`+i).attr("xlink:href", "desert.jpg");
                 
             } else {
@@ -96,6 +102,10 @@ function boardGen() {
         }
     } else {
         boardGen();
+    }
+
+    if (firstLoad) {
+        firstLoad = false;
     }
 }
 
