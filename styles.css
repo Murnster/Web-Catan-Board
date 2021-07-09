@@ -1,24 +1,25 @@
 /* Author: Ryan Murney */
 /* Main CSS file for Catan Board Generator Application  */
 body {
-    background: antiquewhite;
+    background: bisque;
 }
 #mainContent {
     max-width: 100%;
     max-height: 100vh;
     overflow-x: hidden;
-    padding: 15px;
     background: transparent;
+    overflow: hidden;
 }
 .mainHead {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
 }
 .board {
     padding-left: 23px !important;
 }
 .mainFoot {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 45px;
 }
 .board-row {
@@ -42,5 +43,18 @@ body {
     color: black;
 }
 .tile-text {
+    font-family: cursive;
     font-size: x-large;
+}
+#newBoardBtn {
+    line-height: 85px;
+    height: 85px;
+    width: 250px;
+    margin-bottom: 25px;
+    border-radius: 30px;
+    background: burlywood;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: xx-large;
+    font-family: cursive;
 }
