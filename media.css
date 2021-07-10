@@ -10,6 +10,11 @@
     .hex {
         margin: -17.7 -18.26px;
     }
+    #newBoardBtn {
+        line-height: 70px;
+        height: 70px;
+        width: 235px;
+    }
 }
 @media screen and (max-width: 760px) {
     .board {
@@ -22,6 +27,12 @@
     }
     .hex {
         margin: -17.7 -14.67px;
+    }
+    #newBoardBtn {
+        line-height: 55px;
+        height: 55px;
+        width: 190px;
+        font-size: x-large;
     }
 }
 @media screen and (max-width: 600px) {
@@ -39,6 +50,15 @@
     .hex {
         margin: -17.7 -11px;
     }
+    #newBoardBtn {
+        line-height: 35px;
+        height: 35px;
+        width: 125px;
+        font-size: large;
+    }
+    .mainFoot {
+        margin-top: 20px;
+    }
 }
 @media screen and (max-width: 475px) {
     .board {
@@ -48,15 +68,24 @@
         font-size: large;
     }
     #mainContent {
-        padding-top: 15%;
+        padding-top: 10%;
     }
     .tileDiv {
-        width: 55px; 
-        height: 55px;
-        margin-right: 8.4px;
+        width: 45px; 
+        height: 45px;
+        margin-right: 6.8px;
     }
     .hex {
         margin: -17.7 -6px;
+    }
+    #newBoardBtn {
+        line-height: 20px;
+        height: 20px;
+        width: 90px;
+        font-size: small;
+    }
+    .mainFoot {
+        margin-top: 5px;
     }
 }
 @media screen and (max-width: 320px) {
@@ -77,6 +106,15 @@
     .hex {
         margin: -17.7 -6.6px;
     }
+    #newBoardBtn {
+        line-height: 15px;
+        height: 15px;
+        width: 75px;
+        font-size: x-small;
+    }
+    .mainFoot {
+        margin-top: 5px;
+    }
 }
 @media screen and (max-width: 280px) {
     .board {
@@ -92,5 +130,14 @@
     }
     .hex {
         margin: -17.7 -6.013px;
+    }
+    #newBoardBtn {
+        line-height: 15px;
+        height: 15px;
+        width: 75px;
+        font-size: x-small;
+    }
+    .mainFoot {
+        margin-top: 5px;
     }
 }

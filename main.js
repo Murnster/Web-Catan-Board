@@ -105,6 +105,10 @@ function boardGen() {
     }
 
     if (firstLoad) {
+        $('#newBoardBtn').off('click').on('click', () => {
+            boardGen();
+        });
+
         firstLoad = false;
     }
 }
