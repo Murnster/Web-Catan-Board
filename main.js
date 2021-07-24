@@ -72,30 +72,30 @@ function boardGen() {
         for (var i=0; i<boardNums.length; i++) {
             if (boardNums[i] == 0) {
                 $('#tileText'+i).prev('.tileNum').addClass('hidden');
-                $(`#tile`+i).attr("xlink:href", "desert.jpg");
+                $(`#tile`+i).attr('xlink:href', 'desert.jpg');
                 
             } else {
                 $('#tileText'+i).html(boardNums[i]);
 
                 switch (terrains[i]) {
-                    case "wood":
-                        $(`#tile`+i).attr("xlink:href", "wood.jpg");
+                    case 'wood':
+                        $(`#tile`+i).attr('xlink:href', 'wood.jpg');
                         break;
     
-                    case "wheat":
-                        $(`#tile`+i).attr("xlink:href", "wheat.jpg");
+                    case 'wheat':
+                        $(`#tile`+i).attr('xlink:href', 'wheat.jpg');
                         break;
     
-                    case "sheep":
-                        $(`#tile`+i).attr("xlink:href", "sheep.jpg");
+                    case 'sheep':
+                        $(`#tile`+i).attr('xlink:href', 'sheep.jpg');
                         break;
     
-                    case "rock":
-                        $(`#tile`+i).attr("xlink:href", "rock.jpg");
+                    case 'rock':
+                        $(`#tile`+i).attr('xlink:href', 'rock.jpg');
                         break;
     
-                    case "clay":
-                        $(`#tile`+i).attr("xlink:href", "clay.jpg");
+                    case 'clay':
+                        $(`#tile`+i).attr('xlink:href', 'clay.jpg');
                         break;
                 }
             }
