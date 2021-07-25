@@ -46,6 +46,9 @@ body {
     font-family: cursive;
     font-size: x-large;
 }
+.redNumber {
+    fill: red;
+}
 #newBoardBtn {
     line-height: 85px;
     height: 85px;

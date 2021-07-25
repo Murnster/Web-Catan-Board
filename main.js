@@ -73,9 +73,14 @@ function boardGen() {
             if (boardNums[i] == 0) {
                 $('#tileText'+i).prev('.tileNum').addClass('hidden');
                 $(`#tile`+i).attr('xlink:href', 'desert.jpg');
-                
             } else {
                 $('#tileText'+i).html(boardNums[i]);
+
+                if (sixOrEight(boardNums[i])) {
+                    $('#tileText'+i).addClass('redNumber');
+                } else {
+                    $('#tileText'+i).removeClass('redNumber');
+                }
 
                 switch (terrains[i]) {
                     case 'wood':
@@ -205,6 +210,14 @@ function terrainArray(array) {
     };
 
     return terrains;
+}
+
+function sixOrEight(number) {
+    if (number == 6 || number == 8) {
+        return true;
+    } else {
+        return false
+    }
 }
 
 // **old concept?
