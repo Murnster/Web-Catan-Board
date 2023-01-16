@@ -14,130 +14,165 @@
         line-height: 70px;
         height: 70px;
         width: 235px;
+        padding: 10px;
     }
 }
+
 @media screen and (max-width: 760px) {
     .board {
         padding-left: 15.33px !important;
     }
+    
     .tileDiv {
         width: 100px; 
         height: 100px;
         margin-right: 15.33px;
     }
+    
     .hex {
         margin: -17.7 -14.67px;
     }
+    
     #newBoardBtn {
         line-height: 55px;
         height: 55px;
         width: 190px;
         font-size: x-large;
+        padding: 10px;
     }
 }
+
 @media screen and (max-width: 600px) {
     .board {
         padding-left: 11.5px !important;
     }
+    
     #mainContent {
-        padding-top: 10%;
+        padding-top: 20%;
     }
+    
     .tileDiv {
         width: 75px; 
         height: 75px;
         margin-right: 11.5px;
     }
+    
     .hex {
         margin: -17.7 -11px;
     }
+    
     #newBoardBtn {
         line-height: 35px;
         height: 35px;
         width: 125px;
         font-size: large;
+        padding: 10px;
     }
+    
     .mainFoot {
         margin-top: 20px;
     }
+    
 }
+
 @media screen and (max-width: 475px) {
     .board {
         padding-left: 8.4px !important;
     }
+    
     .mainHead {
         font-size: large;
     }
+    
     #mainContent {
-        padding-top: 10%;
+        padding-top: 20%;
     }
+    
     .tileDiv {
-        width: 45px; 
-        height: 45px;
-        margin-right: 6.8px;
+        width: 66px; 
+        height: 66px;
+        margin-right: 5.1px;
     }
+    
     .hex {
-        margin: -17.7 -6px;
+        margin: -17.7 -5.6px;
     }
+    
     #newBoardBtn {
         line-height: 20px;
         height: 20px;
         width: 90px;
         font-size: small;
+        padding: 10px;
     }
+    
     .mainFoot {
-        margin-top: 5px;
+        margin-top: 25px;
     }
 }
+
 @media screen and (max-width: 320px) {
     .board {
         padding-left: 6.9px !important;
     }
+    
     .mainHead {
         font-size: medium;
     }
+    
     #mainContent {
         padding-top: 5%;
     }
+    
     .tileDiv {
         width: 45px;
         height: 45px;
         margin-right: 6.9px;
     }
+    
     .hex {
         margin: -17.7 -6.6px;
     }
+    
     #newBoardBtn {
         line-height: 15px;
         height: 15px;
         width: 75px;
         font-size: x-small;
     }
+    
     .mainFoot {
-        margin-top: 5px;
+        margin-top: 25px;
     }
 }
+
 @media screen and (max-width: 280px) {
     .board {
         padding-left: 6.28px !important;
     }
+    
     #mainContent {
         padding-top: 5%;
     }
+    
     .tileDiv {
         width: 41px;
         height: 41px;
         margin-right: 6.28px;
     }
+    
     .hex {
         margin: -17.7 -6.013px;
     }
+    
     #newBoardBtn {
         line-height: 15px;
         height: 15px;
         width: 75px;
         font-size: x-small;
     }
+    
     .mainFoot {
-        margin-top: 5px;
+        margin-top: 25px;
     }
 }

@@ -60,19 +60,11 @@ function boardGen() {
     if (nums && terrs) {
         terrains = terrainArray(terrNums);
         
-        // console.log(boardNums);
-        // console.log(terrains);
-        // console.log('This failed: ' + fails);
-        // console.log('   ' + boardNums[0] + terrains[0].substring(0,2) + ' ' + boardNums[1] + terrains[1].substring(0,2) + ' ' + boardNums[2]+ terrains[2].substring(0,2) + ' ');
-        // console.log(' ' + boardNums[3] + terrains[3].substring(0,2) + ' ' + boardNums[4] + terrains[4].substring(0,2) + ' ' + boardNums[5] + terrains[5].substring(0,2) + ' ' + boardNums[6] + terrains[6].substring(0,2));
-        // console.log(boardNums[7] + terrains[7].substring(0,2) + ' ' + boardNums[8] + terrains[8].substring(0,2) + ' ' + boardNums[9] + terrains[9].substring(0,2) + ' ' + boardNums[10] + terrains[10].substring(0,2) + ' ' + boardNums[11] + terrains[11].substring(0,2));
-        // console.log(' ' + boardNums[12] + terrains[12].substring(0,2) + ' ' + boardNums[13] + terrains[13].substring(0,2) + ' ' + boardNums[14] + terrains[14].substring(0,2) + ' ' + boardNums[15] + terrains[15].substring(0,2));
-        // console.log('   ' + boardNums[16] + terrains[16].substring(0,2) + ' ' + boardNums[17] + terrains[17].substring(0,2) + ' ' + boardNums[18] + terrains[18].substring(0,2) + ' ');
-
         for (var i=0; i<boardNums.length; i++) {
             if (boardNums[i] == 0) {
                 $('#tileText'+i).prev('.tileNum').addClass('hidden');
-                $(`#tile`+i).attr('xlink:href', 'desert.jpg');
+                // $(`#tile`+i).attr('xlink:href', 'desert.jpg');
+                $(`#poly`+i).attr('fill', 'burlywood');
             } else {
                 $('#tileText'+i).html(boardNums[i]);
 
@@ -84,23 +76,28 @@ function boardGen() {
 
                 switch (terrains[i]) {
                     case 'wood':
-                        $(`#tile`+i).attr('xlink:href', 'wood.jpg');
+                        // $(`#tile`+i).attr('xlink:href', 'wood.jpg');
+                        $(`#poly`+i).attr('fill', 'darkgreen');
                         break;
     
                     case 'wheat':
-                        $(`#tile`+i).attr('xlink:href', 'wheat.jpg');
+                        // $(`#tile`+i).attr('xlink:href', 'wheat.jpg');
+                        $(`#poly`+i).attr('fill', 'gold');
                         break;
     
                     case 'sheep':
-                        $(`#tile`+i).attr('xlink:href', 'sheep.jpg');
+                        // $(`#tile`+i).attr('xlink:href', 'sheep.jpg');
+                        $(`#poly`+i).attr('fill', 'lightgreen');
                         break;
     
                     case 'rock':
-                        $(`#tile`+i).attr('xlink:href', 'rock.jpg');
+                        // $(`#tile`+i).attr('xlink:href', 'rock.jpg');
+                        $(`#poly`+i).attr('fill', 'gray');
                         break;
     
                     case 'clay':
-                        $(`#tile`+i).attr('xlink:href', 'clay.jpg');
+                        // $(`#tile`+i).attr('xlink:href', 'clay.jpg');
+                        $(`#poly`+i).attr('fill', 'brown');
                         break;
                 }
             }
@@ -139,7 +136,7 @@ function numCheck(a, b, c, d) {
                 if (b == 6 || b == 8 || c == 6 || c == 8 || d == 6 || d == 8) {
                     return false;
                 } else {
-                return true; 
+                    return true; 
                 }
             } else {
                 if (a == 2 || a == 12) {

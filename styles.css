@@ -3,6 +3,7 @@
 body {
     background: bisque;
 }
+
 #mainContent {
     max-width: 100%;
     max-height: 100vh;
@@ -10,45 +11,56 @@ body {
     background: transparent;
     overflow: hidden;
 }
+
 .mainHead {
     text-align: center;
     margin-bottom: 25px;
 }
+
 .board {
     padding-left: 23px !important;
 }
+
 .mainFoot {
     display: flex;
     justify-content: center;
     margin-top: 45px;
 }
+
 .board-row {
     display: flex;
     justify-content: center;
 }
+
 .hex {
     position: relative;
     margin: -17.7px -22;
 }
+
 .hidden {
     display: none;
 }
+
 .tileDiv {
     width: 150px; 
     height: 150px;
     margin-right: 23px;
 }
+
 .tileNum {
     fill: beige;
     color: black;
 }
+
 .tile-text {
-    font-family: cursive;
     font-size: x-large;
+    font-weight: bold;
 }
+
 .redNumber {
     fill: red;
 }
+
 #newBoardBtn {
     line-height: 85px;
     height: 85px;
@@ -60,4 +72,5 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: xx-large;
     font-family: cursive;
+    font-weight: bold;
 }
