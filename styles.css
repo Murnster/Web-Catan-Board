@@ -34,7 +34,7 @@ body {
 
 .hex {
     position: relative;
-    margin: -17.7px -22;
+    margin: -17.7px -19;
 }
 
 .hidden {
@@ -42,8 +42,8 @@ body {
 }
 
 .tileDiv {
-    width: 150px; 
-    height: 150px;
+    width: 125px; 
+    height: 125px;
     margin-right: 23px;
 }
 

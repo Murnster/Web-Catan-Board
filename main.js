@@ -79,7 +79,7 @@ function boardGen() {
                         // $(`#tile`+i).attr('xlink:href', 'wood.jpg');
                         $(`#poly`+i).attr('fill', 'darkgreen');
                         break;
-    
+                    
                     case 'wheat':
                         // $(`#tile`+i).attr('xlink:href', 'wheat.jpg');
                         $(`#poly`+i).attr('fill', 'gold');
